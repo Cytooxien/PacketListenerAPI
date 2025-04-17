@@ -27,7 +27,7 @@ public abstract class ChannelAbstract {
     static final Class<?> MinecraftServer = nmsClassResolver.resolveSilent("MinecraftServer", "server.MinecraftServer");
 
     protected static final FieldResolver entityPlayerFieldResolver = new FieldResolver(EntityPlayer);
-    protected static final FieldResolver playerConnectionFieldResolver = new FieldResolver(PlayerConnection);
+    protected static final FieldResolver playerConnectionFieldResolver = new FieldResolver(PlayerConnection.getSuperclass());
     protected static final FieldResolver networkManagerFieldResolver = new FieldResolver(NetworkManager);
     protected static final FieldResolver minecraftServerFieldResolver = new FieldResolver(MinecraftServer);
     protected static final FieldResolver serverConnectionFieldResolver = new FieldResolver(ServerConnection);

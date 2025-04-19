@@ -36,7 +36,7 @@
         <dependency>
             <groupId>org.inventivetalent</groupId>
             <artifactId>reflectionhelper</artifactId>
-            <version>1.18.14-SNAPSHOT</version>
+            <version>1.18.15-SNAPSHOT</version>
         </dependency>
 
         <dependency>

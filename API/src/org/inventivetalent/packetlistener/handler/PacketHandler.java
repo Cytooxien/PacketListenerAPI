@@ -170,8 +170,8 @@ public abstract class PacketHandler {
     }
 
     static NMSClassResolver nmsClassResolver = new NMSClassResolver();
-    static Class<?> PlayerConnection = nmsClassResolver.resolveSilent("PlayerConnection", "server.network.PlayerConnection");
-    static Class<?> EntityPlayer = nmsClassResolver.resolveSilent("EntityPlayer", "server.level.EntityPlayer");
+    static Class<?> PlayerConnection = nmsClassResolver.resolveSilent("PlayerConnection", "server.network.PlayerConnection", "server.network.ServerGamePacketListenerImpl");
+    static Class<?> EntityPlayer = nmsClassResolver.resolveSilent("EntityPlayer", "server.level.EntityPlayer", "server.level.ServerPlayer");
     static FieldResolver EntityPlayerFieldResolver = new FieldResolver(EntityPlayer);
     static MethodResolver PlayerConnectionMethodResolver = new MethodResolver(PlayerConnection);
 

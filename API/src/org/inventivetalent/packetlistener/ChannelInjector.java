@@ -26,7 +26,6 @@ public class ChannelInjector {
 		try {
 			Class.forName("io.netty.channel.Channel");
 			channel = newChannelInstance(iPacketListener, "org.inventivetalent.packetlistener.channel.INCChannel");
-			System.out.println("[PacketListenerAPI] Using INChannel");
 			return true;
 		} catch (Exception e1) {
 			exceptions.add(e1);

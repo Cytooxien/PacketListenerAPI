@@ -13,7 +13,6 @@
     <artifactId>api</artifactId>
     <version>${pl.version}</version>
 
-
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -37,12 +36,6 @@
             <groupId>org.inventivetalent</groupId>
             <artifactId>reflectionhelper</artifactId>
             <version>1.18.15-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.inventivetalent.spiget-update</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.4.3-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

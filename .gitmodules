@@ -1,0 +1,3 @@
+[submodule "ReflectionHelper"]
+	path = ReflectionHelper
+	url = https://github.com/Cytooxien/ReflectionHelper.git

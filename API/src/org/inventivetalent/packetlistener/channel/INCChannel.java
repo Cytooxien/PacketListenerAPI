@@ -57,7 +57,7 @@ public class INCChannel extends ChannelAbstract {
 	io.netty.channel.Channel getChannel(Player player) throws ReflectiveOperationException {
 		final Object handle = Minecraft.getHandle(player);
 		final Object connection = playerConnection.get(handle);
-		return (io.netty.channel.Channel) channelField.get(networkManager.get(connection));
+		return channelField.get(networkManager.get(connection));
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class INCChannel extends ChannelAbstract {
 					try {
 						io.netty.channel.Channel channel = null;
 						while (channel == null) {
-							channel = (io.netty.channel.Channel) channelField.get(a);
+							channel = channelField.get(a);
 						}
 						if (channel.pipeline().get(KEY_SERVER) == null) {
 							channel.pipeline().addBefore(channel.pipeline().get(KEY_UNBUNDLER) != null ? KEY_UNBUNDLER : KEY_HANDLER, KEY_SERVER, new ChannelHandler(new INCChannelWrapper(channel)));
@@ -96,7 +96,7 @@ public class INCChannel extends ChannelAbstract {
 					try {
 						io.netty.channel.Channel channel = null;
 						while (channel == null) {
-							channel = (io.netty.channel.Channel) channelField.get(a);
+							channel = channelField.get(a);
 						}
 						channel.pipeline().remove(KEY_SERVER);
 					} catch (Exception e) {

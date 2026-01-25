@@ -12,10 +12,11 @@ import org.inventivetalent.reflection.util.AccessUtil;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class PacketHandler {
 
-    private static final List<PacketHandler> handlers = new ArrayList<>();
+    private static final List<PacketHandler> handlers = new CopyOnWriteArrayList<>();
 
     private boolean hasSendOptions;
     private boolean forcePlayerSend;
